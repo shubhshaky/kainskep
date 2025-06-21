@@ -12,7 +12,7 @@ pipeline {
 
     stage('Checkout') {
       steps {
-        git 'https://github.com/your-repo/your-apps.git'
+        git 'https://github.com/shubhshaky/kainskep/'
       }
     }
 
