@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flaskapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flaskapp
+  template:
+    metadata:
+      labels:
+        app: flaskapp
+    spec:
+      containers:
+      - name: flask-container
+        image: 025066265815.dkr.ecr.ap-south-1.amazonaws.com/flaskapp:latest
+        ports:
+        - containerPort: 5000
